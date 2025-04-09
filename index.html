@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SIP Calculator</h1>
+            <p>Plan your financial future with our easy-to-use SIP calculator</p>
+        </div>
+        
+        <div class="calculator">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="monthlyInvestment">Monthly Investment (₹)</label>
+                    <input type="number" id="monthlyInvestment" min="500" max="200000" value="5000">
+                    <input type="range" id="investmentSlider" class="slider" min="500" max="200000" value="5000" step="500">
+                    <div class="range-values">
+                        <span>₹500</span>
+                        <span>₹200,000</span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="returnRate">Expected Annual Return (%)</label>
+                    <input type="number" id="returnRate" min="1" max="30" value="12">
+                    <input type="range" id="returnSlider" class="slider" min="1" max="30" value="12" step="0.5">
+                    <div class="range-values">
+                        <span>1%</span>
+                        <span>30%</span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="timePeriod">Time Period (Years)</label>
+                    <input type="number" id="timePeriod" min="1" max="40" value="10">
+                    <input type="range" id="timeSlider" class="slider" min="1" max="40" value="10" step="1">
+                    <div class="range-values">
+                        <span>1 Year</span>
+                        <span>40 Years</span>
+                    </div>
+                </div>
+                
+                <button id="calculateBtn">Calculate</button>
+            </div>
+            
+            <div class="result-section">
+                <div class="result-card">
+                    <div class="result-value" id="futureValue">₹0</div>
+                    <div class="result-label">Estimated Future Value</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-value" id="investedAmount">₹0</div>
+                    <div class="result-label">Total Invested Amount</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-value" id="wealthGained">₹0</div>
+                    <div class="result-label">Wealth Gained</div>
+                </div>
+                
+                <div class="summary" id="summary">
+                    Enter your investment details and click Calculate to see the results.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
